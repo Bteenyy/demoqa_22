@@ -5,13 +5,13 @@ import org.junit.jupiter.api.Test;
 import pages.RegistrationPage;
 import utils.EnteredDataRegComponent;
 
-public class MyTestDemoqa22 extends tests.othertests.TestBase {
+public class MyTestDemoqa22 extends TestBase {
     RegistrationPage registrationPage = new RegistrationPage();
     EnteredDataRegComponent dataReg = new EnteredDataRegComponent();
 
     @Tag("simple")
     @Test
-    void demoQaTest() {
+    void demoqaTest() {
         registrationPage.openPage()
                 .fixBanReg()
                 .setFirstName(dataReg.firstName)

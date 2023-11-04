@@ -1,5 +1,6 @@
 package test;
 
+import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 import pages.RegistrationPage;
 import utils.EnteredDataRegComponent;
@@ -8,6 +9,7 @@ public class MyTestDemoqa22 extends tests.othertests.TestBase {
     RegistrationPage registrationPage = new RegistrationPage();
     EnteredDataRegComponent dataReg = new EnteredDataRegComponent();
 
+    @Tag("simple")
     @Test
     void demoQaTest() {
         registrationPage.openPage()

@@ -18,9 +18,12 @@ dependencies {
 }
 
 test {
-    useJUnitPlatform {
-        if (project.hasProperty("includeTags")) {
-            includeTags(project.property("includeTags") as String)
-        }
+    useJUnitPlatform()
+}
+
+task simple_test(type: Test)
+{
+    useJUnitPlatform{
+        includeTags("simple")
     }
 }

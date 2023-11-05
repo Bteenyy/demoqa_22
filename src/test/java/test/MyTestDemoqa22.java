@@ -19,9 +19,7 @@ public class MyTestDemoqa22 extends TestBase {
                     .fixBanReg();
         });
         step("Fill form", () -> {
-            registrationPage.openPage()
-                    .fixBanReg()
-                    .setFirstName(dataReg.firstName)
+            registrationPage.setFirstName(dataReg.firstName)
                     .setLastName(dataReg.lastName)
                     .setUserEmail(dataReg.userEmail)
                     .setGender(dataReg.gender)

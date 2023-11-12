@@ -18,11 +18,11 @@ public class TestBase {
     @BeforeAll
     static void beforeAll() {
         Configuration.baseUrl = "https://demoqa.com";
-        Configuration.browser=System.getProperty("browser_name","chrome");
-        Configuration.browserSize=System.getProperty("browser_size","1920x1080");
-        Configuration.browserVersion=System.getProperty("browser_version","100.0");
+        Configuration.browser=System.getProperty("browserName","chrome");
+        Configuration.browserSize=System.getProperty("browserSize","1920x1080");
+        Configuration.browserVersion=System.getProperty("browserVersion","100.0");
         Configuration.pageLoadStrategy = "eager";
-        Configuration.remote=System.getProperty("remote");
+        Configuration.remote=System.getProperty("selenoidAddress");
         SelenideLogger.addListener("AllureSelenide", new AllureSelenide());
 
         DesiredCapabilities capabilities = new DesiredCapabilities();

@@ -43,8 +43,7 @@ public class Attach {
     }
 
     public static URL getVideoUrl() {
-        String remote = System.getProperty("remoteWebDriver");
-        String videoUrl = remote + sessionId() + ".mp4";
+        String videoUrl = System.getProperty("remote_web_driver") + sessionId() + ".mp4";
         try {
             return new URL(videoUrl);
         } catch (MalformedURLException e) {
